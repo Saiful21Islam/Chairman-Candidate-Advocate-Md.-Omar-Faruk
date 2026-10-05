@@ -1,0 +1,22 @@
+body {
+  background: #f8fafc;
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, #0b2559 0%, #1e40af 55%, #06173b 100%);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -8px rgba(11, 37, 89, 0.18);
+}
+
+:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}

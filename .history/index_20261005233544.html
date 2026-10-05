@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অ্যাডভোকেট মু. ওমর ফারুক | ৭নং রাজারকুল ইউনিয়ন পরিষদ</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 800: '#0b2559', 900: '#06173b', 950: '#030c21' },
+            royal: { 50: '#eff4ff', 100: '#dbe6ff', 600: '#1e40af', 700: '#1e3a8a' },
+            gold: { 400: '#facc15', 500: '#eab308' }
+          },
+          fontFamily: {
+            sans: ['Hind Siliguri', 'sans-serif'],
+            serif: ['Noto Serif Bengali', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-800 antialiased">
+
+  <!-- Top Bar -->
+  <div class="bg-navy-950 text-white text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <span><i class="fa-solid fa-location-dot text-gold-400 mr-1"></i><span data-bn="৭নং রাজারকুল ইউনিয়ন পরিষদ, রামু, কক্সবাজার" data-en="7 No. Rajarkul Union Parishad, Ramu, Cox's Bazar"></span></span>
+      <button onclick="toggleLang()" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-3 py-1 rounded-full transition"><i class="fa-solid fa-globe mr-1"></i><span id="langLabel">English</span></button>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="650.jpg" alt="" class="w-12 h-12 rounded-full object-cover object-top border-2 border-gold-400" onerror="this.src='648.jpg'">
+        <div>
+          <p class="font-bold text-navy-900 leading-tight" data-bn="অ্যাডভোকেট মু. ওমর ফারুক" data-en="Advocate Md. Omar Faruk"></p>
+          <p class="text-xs font-semibold text-royal-600" data-bn="চেয়ারম্যান পদপ্রার্থী | ৭নং রাজারকুল" data-en="Chairman Candidate | 7 No. Rajarkul"></p>
+        </div>
+      </a>
+      <nav class="hidden lg:flex gap-6 text-sm font-semibold text-slate-700">
+        <a href="#about" class="hover:text-royal-600" data-bn="পরিচিতি" data-en="About"></a>
+        <a href="#manifesto" class="hover:text-royal-600" data-bn="আমাদের ভাবনা" data-en="Vision"></a>
+        <a href="#citizen-portal" class="hover:text-royal-600" data-bn="সমস্যা ও মতামত" data-en="Your Voice"></a>
+        <a href="#feed" class="hover:text-royal-600" data-bn="জনগণের আওয়াজ" data-en="Public Wall"></a>
+        <a href="#volunteer" class="hover:text-royal-600" data-bn="স্বেচ্ছাসেবক" data-en="Volunteer"></a>
+        <a href="#schedule" class="hover:text-royal-600" data-bn="সময়সূচি" data-en="Schedule"></a>
+        <a href="#contact" class="hover:text-royal-600" data-bn="যোগাযোগ" data-en="Contact"></a>
+      </nav>
+      <button onclick="document.getElementById('mm').classList.toggle('hidden')" class="lg:hidden text-2xl" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mm" class="hidden lg:hidden px-4 pb-4 space-y-2 font-semibold text-sm border-t" onclick="this.classList.add('hidden')">
+      <a class="block pt-2" href="#about" data-bn="পরিচিতি" data-en="About"></a>
+      <a class="block" href="#manifesto" data-bn="আমাদের ভাবনা" data-en="Vision"></a>
+      <a class="block" href="#citizen-portal" data-bn="সমস্যা ও মতামত" data-en="Your Voice"></a>
+      <a class="block" href="#feed" data-bn="জনগণের আওয়াজ" data-en="Public Wall"></a>
+      <a class="block" href="#volunteer" data-bn="স্বেচ্ছাসেবক" data-en="Volunteer"></a>
+      <a class="block" href="#schedule" data-bn="সময়সূচি" data-en="Schedule"></a>
+      <a class="block" href="#contact" data-bn="যোগাযোগ" data-en="Contact"></a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-bg text-white py-12 lg:py-20">
+    <div class="container mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <span class="inline-block bg-gold-500/20 text-gold-400 border border-gold-400/40 px-3 py-1 rounded-full text-sm font-semibold" data-bn="৭নং রাজারকুল ইউনিয়ন পরিষদ নির্বাচন" data-en="7 No. Rajarkul Union Parishad Election"></span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-extrabold leading-tight">
+          <span data-bn="আপনার স্বপ্নের" data-en="Your dream of"></span>
+          <span class="text-gold-400" data-bn="স্মার্ট রাজারকুল" data-en="a Smart Rajarkul"></span>
+        </h1>
+        <p class="text-slate-200 max-w-2xl mx-auto lg:mx-0" data-bn="কী কী কাজ আগে হওয়া উচিত, তা আপনিই বলুন। আপনার মতামতের ভিত্তিতেই গড়ে উঠবে আমাদের পরিকল্পনা।" data-en="Tell us what should come first. Our plans will be built on your feedback."></p>
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 text-sm">
+          <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/15"><i class="fa-solid fa-scale-balanced text-gold-400 mr-1.5"></i><span data-bn="আইনজীবী" data-en="Advocate"></span></span>
+          <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/15"><i class="fa-solid fa-anchor text-gold-400 mr-1.5"></i><span data-bn="লিগ্যাল এডভাইজার, চট্টগ্রাম বন্দর" data-en="Legal Advisor, Chittagong Port"></span></span>
+        </div>
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+          <a href="#citizen-portal" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-6 py-3 rounded-xl shadow-lg transition"><i class="fa-solid fa-bullhorn mr-2"></i><span data-bn="আপনার কথা বলুন" data-en="Have Your Say"></span></a>
+          <a href="#volunteer" class="bg-white/10 hover:bg-white/20 border border-white/30 font-semibold px-6 py-3 rounded-xl transition"><i class="fa-solid fa-hands-helping mr-2"></i><span data-bn="স্বেচ্ছাসেবক হোন" data-en="Volunteer"></span></a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="w-full max-w-sm bg-navy-900 border-2 border-gold-400/60 rounded-2xl overflow-hidden shadow-2xl">
+          <img src="650.jpg" alt="অ্যাডভোকেট মু. ওমর ফারুক" class="w-full h-96 object-cover object-top" onerror="this.src='648.jpg'">
+          <div class="p-4 text-center">
+            <span class="bg-gold-500 text-navy-950 text-xs font-bold px-3 py-1 rounded-full" data-bn="চেয়ারম্যান পদপ্রার্থী" data-en="Chairman Candidate"></span>
+            <p class="text-xl font-bold pt-2" data-bn="অ্যাডভোকেট মু. ওমর ফারুক" data-en="Advocate Md. Omar Faruk"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-center font-serif text-3xl font-extrabold text-navy-900 mb-10" data-bn="প্রার্থীর পরিচিতি" data-en="About the Candidate"></h2>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-soft space-y-5 text-sm">
+          <div><span class="block text-xs font-bold text-slate-500" data-bn="পিতা" data-en="Father"></span><span class="font-semibold text-base" data-bn="মরহুম মাস্টার করিম দাদ" data-en="Late Master Karim Dad"></span></div>
+          <div><span class="block text-xs font-bold text-slate-500" data-bn="পেশা" data-en="Profession"></span><span class="font-semibold text-base" data-bn="আইনজীবী (এডভোকেট)" data-en="Lawyer (Advocate)"></span></div>
+          <div><span class="block text-xs font-bold text-slate-500" data-bn="দায়িত্ব" data-en="Roles"></span>
+            <ul class="list-disc list-inside font-medium space-y-1 pt-1">
+              <li data-bn="লিগ্যাল এডভাইজার, চট্টগ্রাম বন্দর" data-en="Legal Advisor, Chittagong Port"></li>
+              <li data-bn="ক্রীড়া সম্পাদক, চট্টগ্রাম জেলা আইনজীবী সমিতি" data-en="Sports Secretary, Chittagong District Bar Association"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-navy-900 text-white rounded-2xl p-6 sm:p-8 shadow-soft">
+          <h3 class="text-xl font-bold mb-5"><i class="fa-solid fa-graduation-cap text-gold-400 mr-2"></i><span data-bn="শিক্ষাগত যোগ্যতা" data-en="Education"></span></h3>
+          <div class="space-y-4 border-l-2 border-gold-500/40 pl-4">
+            <div><span class="text-xs text-gold-400 font-bold">S.S.C</span><p class="font-semibold" data-bn="রামু খিজারী সরকারি আদর্শ উচ্চ বিদ্যালয় (বিজ্ঞান)" data-en="Ramu Khizari Govt. Model High School (Science)"></p></div>
+            <div><span class="text-xs text-gold-400 font-bold">H.S.C</span><p class="font-semibold" data-bn="চট্টগ্রাম বিশ্ববিদ্যালয় কলেজ (বিজ্ঞান)" data-en="Chittagong University College (Science)"></p></div>
+            <div><span class="text-xs text-gold-400 font-bold">LL.B (Hons) & LL.M</span><p class="font-semibold" data-bn="আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয়, চট্টগ্রাম" data-en="International Islamic University Chittagong"></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO SECTION -->
+  <section id="manifesto" class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-serif text-3xl font-extrabold text-navy-900" data-bn="আমাদের ভাবনা" data-en="Our Vision & Ideas"></h2>
+        <p class="text-slate-600 text-sm mt-2" data-bn="এগুলো চূড়ান্ত প্রতিশ্রুতি নয়, আলোচনার জন্য প্রস্তাবিত ভাবনা। আপনার মতামতে এগুলো বদলাবে ও বাড়বে।" data-en="These are proposed ideas for discussion, not final promises. They will change and grow with your feedback."></p>
+        <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <div id="ideas" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      <div class="text-center mt-10"><a href="#citizen-portal" class="bg-navy-900 hover:bg-royal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition inline-block"><i class="fa-solid fa-pen-to-square text-gold-400 mr-2"></i><span data-bn="আপনার ভাবনা জানান" data-en="Share Your Idea"></span></a></div>
+    </div>
+  </section>
+
+  <!-- CITIZEN PORTAL SECTION -->
+  <section id="citizen-portal" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-serif text-3xl font-extrabold text-navy-900" data-bn="জনগণের প্রত্যাশা ও পরামর্শ পোর্টাল" data-en="Citizens' Expectations & Suggestions Portal"></h2>
+        <p class="text-slate-600 text-sm mt-2" data-bn="সমস্যা বা পরামর্শ লিখুন। মোবাইল নম্বর জনসমক্ষে দেখানো হবে না।" data-en="Write your issue or suggestion. Your mobile number is never shown publicly."></p>
+        <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+      <form id="issueForm" class="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-soft space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="block text-xs font-bold text-slate-700"><span data-bn="আপনার নাম *" data-en="Your Name *"></span>
+            <input id="iName" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal"></label>
+          <label class="block text-xs font-bold text-slate-700"><span data-bn="ওয়ার্ড *" data-en="Ward *"></span>
+            <select id="iWard" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal bg-white"></select></label>
+          <label class="block text-xs font-bold text-slate-700"><span data-bn="মোবাইল নম্বর *" data-en="Mobile *"></span>
+            <input id="iPhone" type="tel" inputmode="tel" required placeholder="0186991321" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal"></label>
+          <label class="block text-xs font-bold text-slate-700"><span data-bn="বিষয় *" data-en="Topic *"></span>
+            <select id="iCat" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal bg-white"></select></label>
+        </div>
+        <label class="block text-xs font-bold text-slate-700"><span data-bn="শিরোনাম *" data-en="Title *"></span>
+          <input id="iTitle" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal"></label>
+        <label class="block text-xs font-bold text-slate-700"><span data-bn="বিস্তারিত *" data-en="Details *"></span>
+          <textarea id="iDesc" rows="4" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal"></textarea></label>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="button" onclick="openPreview()" class="sm:w-1/2 bg-slate-100 hover:bg-slate-200 font-bold py-3.5 rounded-xl border border-slate-300 transition"><i class="fa-solid fa-eye text-royal-600 mr-2"></i><span data-bn="প্রিভিউ দেখুন" data-en="Preview"></span></button>
+          <button type="submit" class="sm:w-1/2 bg-navy-900 hover:bg-royal-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition"><i class="fa-solid fa-paper-plane text-gold-400 mr-2"></i><span data-bn="জমা দিন" data-en="Submit"></span></button>
+        </div>
+        <p id="iMsg" class="text-sm font-semibold min-h-[1.5em]" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FEED SECTION -->
+  <section id="feed" class="py-16 bg-slate-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-3">
+        <h2 class="font-serif text-2xl font-extrabold text-navy-900" data-bn="জনগণের আওয়াজ" data-en="Public Voice"></h2>
+        <span class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg text-xs font-semibold text-royal-700"><span id="cnt">0</span> <span data-bn="টি পোস্ট" data-en="posts"></span></span>
+      </div>
+      <div id="feedBox" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEER SECTION -->
+  <section id="volunteer" class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="text-center mb-8">
+        <h2 class="font-serif text-3xl font-extrabold text-navy-900" data-bn="আমাদের সঙ্গে যুক্ত হোন" data-en="Join Our Team"></h2>
+        <p class="text-slate-600 text-sm mt-2" data-bn="প্রচার ও ভোটকেন্দ্র ব্যবস্থাপনায় স্বেচ্ছাসেবক হিসেবে নাম লিখুন।" data-en="Sign up as a volunteer for campaigning and polling-centre support."></p>
+      </div>
+      <form id="volForm" class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-soft grid sm:grid-cols-3 gap-4">
+        <input id="vName" required data-bn="আপনার নাম" data-en="Your name" class="px-4 py-3 rounded-xl border border-slate-300 text-sm">
+        <input id="vPhone" type="tel" inputmode="tel" required data-bn="মোবাইল নম্বর" data-en="Mobile" class="px-4 py-3 rounded-xl border border-slate-300 text-sm">
+        <select id="vWard" required class="px-4 py-3 rounded-xl border border-slate-300 text-sm bg-white"></select>
+        <button class="sm:col-span-3 bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 rounded-xl transition"><i class="fa-brands fa-whatsapp mr-2"></i><span data-bn="WhatsApp-এ নাম পাঠান" data-en="Send via WhatsApp"></span></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SCHEDULE SECTION -->
+  <section id="schedule" class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-center font-serif text-3xl font-extrabold text-navy-900 mb-8" data-bn="ওয়ার্ডভিত্তিক উঠান বৈঠক" data-en="Ward-wise Meetings"></h2>
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-x-auto">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-navy-900 text-white">
+            <tr>
+              <th class="p-3" data-bn="ওয়ার্ড" data-en="Ward"></th>
+              <th class="p-3" data-bn="তারিখ" data-en="Date"></th>
+              <th class="p-3" data-bn="সময়" data-en="Time"></th>
+              <th class="p-3" data-bn="স্থান" data-en="Place"></th>
+            </tr>
+          </thead>
+          <tbody id="schBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="bg-navy-900 text-white py-14">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-8">
+      <div class="space-y-3">
+        <h3 class="text-xl font-bold" data-bn="অ্যাডভোকেট মু. ওমর ফারুক" data-en="Advocate Md. Omar Faruk"></h3>
+        <p class="text-sm text-slate-300 max-w-lg" data-bn="ভোটার তালিকা, ভোটকেন্দ্র ও দিকনির্দেশনার জন্য যোগাযোগ করুন।" data-en="Contact us for voter list, polling centre and directions."></p>
+        <p class="text-sm"><i class="fa-solid fa-location-dot text-gold-400 mr-2"></i><span id="fOffice"></span></p>
+        <p class="text-sm"><i class="fa-solid fa-phone text-gold-400 mr-2"></i><span id="fPhone"></span></p>
+        <p class="text-sm"><i class="fa-solid fa-envelope text-gold-400 mr-2"></i><span id="fMail"></span></p>
+      </div>
+      <div class="flex gap-3 lg:justify-end items-start">
+        <a id="fFb" href="#" aria-label="Facebook" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-gold-500 hover:text-navy-950 flex items-center justify-center text-lg transition"><i class="fa-brands fa-facebook-f"></i></a>
+        <a id="fWa" href="#" aria-label="WhatsApp" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-gold-500 hover:text-navy-950 flex items-center justify-center text-lg transition"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 border-t border-white/10 mt-10 pt-5 text-xs text-slate-400 flex flex-col sm:flex-row justify-between gap-2">
+      <p data-bn="© ২০২৬ অ্যাডভোকেট মু. ওমর ফারুক নির্বাচন ক্যাম্পেইন" data-en="© 2026 Adv. Md. Omar Faruk Election Campaign"></p>
+      <p class="text-gold-400" data-bn="ডেভেলপমেন্ট বাই সাইফুল ইসলাম" data-en="Developed by Saiful Islam"></p>
+    </div>
+  </footer>
+
+  <!-- PREVIEW MODAL -->
+  <div id="pm" class="hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true">
+    <div class="bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl">
+      <div class="bg-navy-900 text-white px-6 py-4 font-bold"><i class="fa-solid fa-eye text-gold-400 mr-2"></i><span data-bn="আপনার পোস্টের প্রিভিউ" data-en="Post Preview"></span></div>
+      <div class="p-6 space-y-2 text-sm">
+        <p><b id="pN"></b> · <span id="pW" class="text-royal-700 font-semibold"></span></p>
+        <p class="text-xs text-slate-500" id="pC"></p>
+        <p class="font-bold" id="pT"></p>
+        <p class="whitespace-pre-line text-slate-700" id="pD"></p>
+      </div>
+      <div class="bg-slate-100 px-6 py-4 flex justify-end gap-3">
+        <button onclick="closePreview()" class="px-4 py-2 rounded-xl bg-slate-200 font-semibold text-xs" data-bn="সম্পাদনা" data-en="Edit"></button>
+        <button onclick="closePreview();submitIssue()" class="px-5 py-2 rounded-xl bg-navy-900 text-white font-semibold text-xs" data-bn="চূড়ান্ত জমা" data-en="Final Submit"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
