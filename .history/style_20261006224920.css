@@ -1,4 +1,4 @@
-/* Custom Stylesheet for Smart Rajarkul Portal */
+/* Custom CSS styling for Smart Rajarkul */
 
 .hero-bg {
   background: linear-gradient(135deg, #030c21 0%, #06173b 50%, #0b2559 100%);
@@ -12,23 +12,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(234, 179, 8, 0.12) 0%, transparent 40%);
+  background: radial-gradient(circle at 80% 20%, rgba(234, 179, 8, 0.1) 0%, transparent 40%);
   pointer-events: none;
 }
 
-/* Glassmorphism Styling */
+/* Glassmorphism effects */
 .glass-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Smooth Scroll behavior */
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar Design */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

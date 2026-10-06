@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অ্যাডভোকেট মু. ওমর ফারুক | ৭নং রাজারকুল ইউনিয়ন পরিষদ</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 800: '#0b2559', 900: '#06173b', 950: '#030c21' },
+            royal: { 50: '#eff4ff', 100: '#dbe6ff', 600: '#1e40af', 700: '#1e3a8a' },
+            gold: { 400: '#facc15', 500: '#eab308' }
+          },
+          fontFamily: {
+            sans: ['Hind Siliguri', 'sans-serif'],
+            serif: ['Noto Serif Bengali', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-slate-50">
+
+  <!-- Top Bar -->
+  <div class="bg-navy-950 text-white text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <span><i class="fa-solid fa-location-dot text-gold-400 mr-1"></i>৭নং রাজারকুল ইউনিয়ন পরিষদ, রামু, কক্সবাজার</span>
+      <button onclick="toggleLang()" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-3 py-1 rounded-full transition"><i class="fa-solid fa-globe mr-1"></i><span id="langLabel">English</span></button>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="./image/profile.jpeg" alt="অ্যাডভোকেট মু. ওমর ফারুক" class="w-12 h-12 rounded-full object-cover object-top border-2 border-gold-400" onerror="this.src='https://via.placeholder.com/150'">
+        <div>
+          <p class="font-bold text-navy-900 leading-tight">অ্যাডভোকেট মু. ওমর ফারুক</p>
+          <p class="text-xs font-semibold text-royal-600">চেয়ারম্যান পদপ্রার্থী | ৭নং রাজারকুল</p>
+        </div>
+      </a>
+      <nav class="hidden lg:flex gap-6 text-sm font-semibold text-slate-700">
+        <a href="#about" class="hover:text-royal-600">পরিচিতি</a>
+        <a href="#manifesto" class="hover:text-royal-600">চাহিদা ও পরিকল্পনা</a>
+        <a href="#citizen-portal" class="hover:text-royal-600">সমস্যা ও মতামত</a>
+        <a href="#feed" class="hover:text-royal-600">জনগণের আওয়াজ</a>
+        <a href="#volunteer" class="hover:text-royal-600">স্বেচ্ছাসেবক</a>
+        <a href="#schedule" class="hover:text-royal-600">সময়সূচি</a>
+        <a href="#contact" class="hover:text-royal-600">যোগাযোগ</a>
+      </nav>
+      <button onclick="document.getElementById('mm').classList.toggle('hidden')" class="lg:hidden text-2xl" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-bg text-white py-12 lg:py-20">
+    <div class="container mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+        <div class="w-full max-w-sm bg-navy-900 border-2 border-gold-400/60 rounded-2xl overflow-hidden shadow-2xl">
+          <img src="./image/profile.jpeg" alt="অ্যাডভোকেট মু. ওমর ফারুক" class="w-full h-96 object-cover object-top" onerror="this.src='https://via.placeholder.com/400x500'">
+          <div class="p-4 text-center">
+            <span class="bg-gold-500 text-navy-950 text-xs font-bold px-3 py-1 rounded-full">চেয়ারম্যান পদপ্রার্থী</span>
+            <p class="text-xl font-bold pt-2">অ্যাডভোকেট মু. ওমর ফারুক</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left order-1 lg:order-2">
+        <span class="inline-block bg-gold-500/20 text-gold-400 border border-gold-400/40 px-3 py-1 rounded-full text-sm font-semibold">৭নং রাজারকুল ইউনিয়ন পরিষদ নির্বাচন</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-extrabold leading-tight">
+          আমি নিতে আসি নাই,<br>
+          <span class="text-gold-400">দিতে এসেছি।</span>
+        </h1>
+        <p class="text-slate-200 max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg leading-relaxed">আমি কোনো মিথ্যা প্রতিশ্রুতি দিতে আসি নাই; আমি এসেছি রাজারকুলবাসীর সুনির্দিষ্ট সমস্যাগুলো জানতে এবং সমাধানকল্পে সঠিক পরিকল্পনা তৈরি করতে।</p>
+
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+          <a href="#citizen-portal" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-6 py-3 rounded-xl shadow-lg transition"><i class="fa-solid fa-bullhorn mr-2"></i>আপনার নতুন সমস্যা ও প্রস্তাবনা লিখুন</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO / DEMANDS & PLAN SECTION -->
+  <section id="manifesto" class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-serif text-3xl font-extrabold text-navy-900">জনগণের চাহিদা ও প্রস্তাবিত পরিকল্পনা</h2>
+        <p class="text-slate-600 text-sm mt-2">জনগণের সংগৃহীত তথ্যের ভিত্তিতে নিচে ম্যানুয়ালি পরিকল্পনাগুলো যুক্ত ও হালনাগাদ করা হচ্ছে।</p>
+        <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+      
+      <!-- এখানে অটোমেটিক এবং ম্যানুয়ালি যোগ হওয়া প্ল্যানগুলো জমা হবে -->
+      <div id="ideas" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+      <div class="text-center mt-10">
+        <a href="#citizen-portal" class="bg-navy-900 hover:bg-royal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition inline-block"><i class="fa-solid fa-plus-circle text-gold-400 mr-2"></i>আপনার এলাকার নতুন বিষয় যোগ করুন</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITIZEN PORTAL SECTION -->
+  <section id="citizen-portal" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-serif text-3xl font-extrabold text-navy-900">নাগরিক সমস্যা ও নতুন প্রস্তাবনা পোর্টাল</h2>
+        <p class="text-slate-600 text-sm mt-2">আপনার নতুন কোনো বিষয় বা এলাকাভিত্তিক সমস্যা থাকলে নিচে লিখে দিন।</p>
+        <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <form id="issueForm" class="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="block text-xs font-bold text-slate-700">
+            <span>আপনার নাম *</span>
+            <input id="iName" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal">
+          </label>
+          <label class="block text-xs font-bold text-slate-700">
+            <span>ওয়ার্ড নম্বর (১-৯) *</span>
+            <select id="iWard" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal bg-white"></select>
+          </label>
+          <label class="block text-xs font-bold text-slate-700">
+            <span>মোবাইল নম্বর (১১ ডিজিট) *</span>
+            <input id="iPhone" type="tel" inputmode="tel" required placeholder="01869913211" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal">
+          </label>
+          <label class="block text-xs font-bold text-slate-700">
+            <span>ইমেইল ঠিকানা (ঐচ্ছিক)</span>
+            <input id="iEmail" type="email" placeholder="example@gmail.com" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal">
+          </label>
+        </div>
+
+        <!-- বিষয় নির্বাচন ও কাস্টম বিষয় যুক্ত করার ফিল্ড -->
+        <div class="space-y-3">
+          <label class="block text-xs font-bold text-slate-700">
+            <span>বিষয় / ক্যাটাগরি নির্বাচন করুন *</span>
+            <select id="iCat" onchange="checkCustomTopic(this.value)" required class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal bg-white"></select>
+          </label>
+          
+          <!-- যদি ইউজার "অন্যান্য / নতুন বিষয় লিখুন" বেছে নেয় তবে এটি ওপেন হবে -->
+          <div id="customCatBox" class="hidden">
+            <label class="block text-xs font-bold text-slate-700 text-royal-700">
+              <span>আপনার নতুন বিষয়/ক্যাটাগরির নাম লিখুন *</span>
+              <input id="iCustomCat" placeholder="যেমন: কৃষি অবকাঠামো, ড্রাগ প্রতিরোধ ইত্যাদি" class="mt-1 w-full px-4 py-3 rounded-xl border border-royal-400 bg-royal-50/50 text-sm font-normal">
+            </label>
+          </div>
+        </div>
+
+        <label class="block text-xs font-bold text-slate-700">
+          <span>সমস্যার শিরোনাম / প্রধান প্রস্তাবনা *</span>
+          <input id="iTitle" required placeholder="সংক্ষেপে আপনার কথাটি লিখুন" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal">
+        </label>
+
+        <label class="block text-xs font-bold text-slate-700">
+          <span>বিস্তারিত ব্যাখ্যা *</span>
+          <textarea id="iDesc" rows="4" required placeholder="আপনার এলাকার সমস্যার বিবরণ এবং আপনার কী চাওয়া বা পরিকল্পনা রয়েছে তা বিস্তারিত লিখুন..." class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-normal"></textarea>
+        </label>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="button" onclick="openPreview()" class="sm:w-1/2 bg-slate-100 hover:bg-slate-200 font-bold py-3.5 rounded-xl border border-slate-300 transition"><i class="fa-solid fa-eye text-royal-600 mr-2"></i>প্রিভিউ দেখুন</button>
+          <button type="submit" class="sm:w-1/2 bg-navy-900 hover:bg-royal-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition"><i class="fa-solid fa-paper-plane text-gold-400 mr-2"></i>জমা দিন</button>
+        </div>
+        <p id="iMsg" class="text-sm font-semibold min-h-[1.5em]" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FEED SECTION -->
+  <section id="feed" class="py-16 bg-slate-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-3">
+        <h2 class="font-serif text-2xl font-extrabold text-navy-900">জনগণের সাবমিট করা প্রস্তাবনা ও সমস্যা</h2>
+        <span class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg text-xs font-semibold text-royal-700"><span id="cnt">0</span> টি পোস্ট</span>
+      </div>
+      <div id="feedBox" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- PREVIEW MODAL -->
+  <div id="pm" class="hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl">
+      <div class="bg-navy-900 text-white px-6 py-4 font-bold flex justify-between items-center">
+        <span><i class="fa-solid fa-eye text-gold-400 mr-2"></i>পোস্ট প্রিভিউ</span>
+        <button onclick="closePreview()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <div class="p-6 space-y-3 text-sm">
+        <p><b id="pN"></b> · <span id="pW" class="text-royal-600 font-semibold"></span></p>
+        <p class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded inline-block font-semibold" id="pC"></p>
+        <p class="font-bold text-base text-navy-900" id="pT"></p>
+        <p class="whitespace-pre-line text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-200" id="pD"></p>
+      </div>
+      <div class="bg-slate-100 px-6 py-4 flex justify-end gap-3">
+        <button onclick="closePreview()" class="px-4 py-2 rounded-xl bg-slate-200 font-semibold text-xs hover:bg-slate-300">সম্পাদনা</button>
+        <button onclick="closePreview(); submitIssue()" class="px-5 py-2 rounded-xl bg-navy-900 text-white font-semibold text-xs hover:bg-royal-700">চূড়ান্ত জমা</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

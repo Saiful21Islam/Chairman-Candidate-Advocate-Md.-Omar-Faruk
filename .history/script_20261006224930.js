@@ -1,7 +1,7 @@
-// ১. ১ থেকে ৯ নম্বর ওয়ার্ডের তালিকা
+// ১. ১ থেকে ৯ নম্বর ওয়ার্ডের তালিকা
 const wards = Array.from({ length: 9 }, (_, i) => `${i + 1} নং ওয়ার্ড`);
 
-// ২. বিষয়/ক্যাটাগরি তালিকা (নতুন বিষয় লেখার অপশনসহ)
+// ২. নতুন ক্যাটাগরি/বিষয়সমূহ
 const categories = [
   "🛣️ রাস্তাঘাট ও যোগাযোগ অবকাঠামো",
   "🚰 সুপেয় পানি ও গভীর নলকূপ",
@@ -10,63 +10,56 @@ const categories = [
   "🎓 শিক্ষা, যুব সমাজ ও খেলার মাঠ",
   "💡 রাস্তার বাতি (স্ট্রিট লাইট)",
   "🧹 বর্জ্য ব্যবস্থাপনা ও পরিবেশ",
-  "➕ অন্যান্য (নিজের মতো নতুন বিষয় লিখুন)"
+  "💬 অন্যান্য নাগরিক সমস্যা ও প্রস্তাবনা"
 ];
 
-// ৩. জনগণের চাহিদা ও প্রস্তাবিত পরিকল্পনা লিস্ট (ম্যানুয়ালি আপডেটযোগ্য)
-let manualPlans = [
-  {
-    title: "স্বচ্ছ শাসন ও জবাবদিহিতা",
-    icon: "fa-scale-balanced",
-    desc: "ইউনিয়ন পরিষদের সকল ডিজিটাল সেবা ও সনদপত্র হয়রানিমুক্ত উপায়ে নিশ্চিত করা।"
-  },
-  {
-    title: "টেকসই ড্রেনেজ ও রাস্তাঘাট",
-    icon: "fa-road",
-    desc: "ওয়ার্ড ভিত্তিক কাঁচা রাস্তা পাকাকরণ ও জলাবদ্ধতা নিরসনে ড্রেনেজ নেটওয়ার্ক তৈরি।"
-  },
-  {
-    title: "সুপেয় পানির নিশ্চয়তা",
-    icon: "fa-faucet-drip",
-    desc: "প্রতিটি ওয়ার্ডে গভীর নলকূপ স্থাপন ও খাবার পানির সংকট দূর করা।"
-  },
-  {
-    title: "মাদকমুক্ত যুব সমাজ ও খেলাধুলা",
-    icon: "fa-shield-heart",
-    desc: "তরুণদের খেলাধুলার সুযোগ সৃষ্টি করা এবং মাদকের বিরুদ্ধে কঠোর অবস্থান।"
-  }
-];
-
+// ৩. ইনিশিয়াল ফেক/ডেমো ডেটা (জনগণের পোস্ট)
 let publicPosts = [
   {
     id: 1,
-    name: "আব্দুল্লাহ আল মামুন",
-    ward: "৩ নং ওয়ার্ড",
+    name: "মোহাম্মদ রফিক",
+    ward: "১ নং ওয়ার্ড",
     topic: "🛣️ রাস্তাঘাট ও যোগাযোগ অবকাঠামো",
-    title: "বাজার সংলগ্ন প্রধান রাস্তা মেরামত",
-    desc: "বর্ষায় বাজারের রাস্তাটি খানাখন্দে ভরে গেছে। দ্রুত সংস্কারের দাবি জানাচ্ছি।",
-    upvotes: 18,
-    time: "১ ঘণ্টা আগে"
+    title: "মেইন সড়ক সংস্কার প্রয়োজন",
+    desc: "১ নম্বর ওয়ার্ডের প্রধান রাস্তাটি বর্ষার পানিতে নষ্ট হয়ে গেছে। দ্রুত সংস্কার করা প্রয়োজন।",
+    upvotes: 12,
+    time: "২ ঘণ্টা আগে"
+  },
+  {
+    id: 2,
+    name: "আব্দুল করিম",
+    ward: "৪ নং ওয়ার্ড",
+    topic: "🚰 সুপেয় পানি ও গভীর নলকূপ",
+    title: "খাবার পানির তীব্র সংকট",
+    desc: "আমাদের এলাকায় খাবার পানির তীব্র সমস্যা। অন্তত ২-৩টি আর্সেনিকমুক্ত নলকূপ স্থাপন দরকার।",
+    upvotes: 24,
+    time: "৫ ঘণ্টা আগে"
   }
 ];
 
-// ইউজার মেটাডেটা ক্যাপচার (IP, Location)
-let userMetaData = { ip: "অজ্ঞাত IP", location: "অনুমতি দেওয়া হয়নি" };
+// ৪. ইউজার মেটাডেটা ক্যাপচার (IP, Geolocation)
+let userMetaData = {
+  ip: "অজ্ঞাত IP",
+  location: "অনুমতি দেওয়া হয়নি"
+};
+
+// ভাষা স্টেট
 let currentLang = "bn";
 
-// DOM লোড হলে রান হবে
+// পেজ লোড হলে রান হবে
 document.addEventListener("DOMContentLoaded", () => {
   populateDropdown("iWard", wards, "ওয়ার্ড নির্বাচন করুন");
   populateDropdown("vWard", wards, "ওয়ার্ড নির্বাচন করুন");
   populateDropdown("iCat", categories, "বিষয় নির্বাচন করুন");
-
+  
   renderIdeas();
   renderSchedule();
   renderFeed();
   fetchUserData();
+  updateLanguageUI();
 });
 
-// ড্রপডাউন পপুলেট
+// ড্রপডাউন অপশন পপুলেট
 function populateDropdown(elemId, list, defaultText) {
   const select = document.getElementById(elemId);
   if (!select) return;
@@ -79,45 +72,14 @@ function populateDropdown(elemId, list, defaultText) {
   });
 }
 
-// কাস্টম বিষয়ের ঘর প্রদর্শন অন/অফ
-function checkCustomTopic(val) {
-  const box = document.getElementById("customCatBox");
-  if (val.includes("নতুন বিষয় লিখুন")) {
-    box.classList.remove("hidden");
-  } else {
-    box.classList.add("hidden");
-  }
-}
-
-// ম্যানুয়ালি নতুন প্ল্যান যোগ করার ফাংশন
-function addNewPlan(title, icon = "fa-lightbulb", desc) {
-  manualPlans.unshift({ title, icon, desc });
-  renderIdeas();
-}
-
-function renderIdeas() {
-  const box = document.getElementById("ideas");
-  if (!box) return;
-
-  box.innerHTML = manualPlans.map(item => `
-    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-      <div class="w-12 h-12 bg-royal-50 rounded-xl flex items-center justify-center text-royal-600 text-xl mb-4">
-        <i class="fa-solid ${item.icon}"></i>
-      </div>
-      <h3 class="font-bold text-navy-900 text-lg mb-2">${item.title}</h3>
-      <p class="text-slate-600 text-sm">${item.desc}</p>
-    </div>
-  `).join('');
-}
-
-// ইউজার IP ও Geolocation ট্র্যাক
+// IP ও লোকেশন ট্র্যাক করার ফাংশন
 async function fetchUserData() {
   try {
     const res = await fetch("https://api.ipify.org?format=json");
     const data = await res.json();
     userMetaData.ip = data.ip;
   } catch (err) {
-    console.log("IP সংগৃহীত হয়নি:", err);
+    console.log("IP তথ্য পাওয়া যায়নি:", err);
   }
 
   if ("geolocation" in navigator) {
@@ -125,31 +87,29 @@ async function fetchUserData() {
       (pos) => {
         userMetaData.location = `Lat: ${pos.coords.latitude.toFixed(4)}, Long: ${pos.coords.longitude.toFixed(4)}`;
       },
-      (err) => console.log("লোকেশন অনুমতি মেলেনি:", err.message)
+      (err) => {
+        console.log("লোকেশন পারমিশন পাওয়া যায়নি:", err.message);
+      }
     );
   }
 }
 
-// ১১ ডিজিটের বিডি মোবাইল নম্বর ভ্যালিডেশন
+// ১১ ডিজিট বিডি নম্বর ভ্যালিডেশন
 function isValidBDPhone(phone) {
-  return /^(?:\+8801|8801|01)[3-9]\d{8}$/.test(phone);
+  const bdRegex = /^(?:\+8801|8801|01)[3-9]\d{8}$/;
+  return bdRegex.test(phone);
 }
 
-// প্রিভিউ মোডাল
+// প্রিভিউ মোডাল
 function openPreview() {
   const name = document.getElementById("iName").value.trim();
   const ward = document.getElementById("iWard").value;
-  let topic = document.getElementById("iCat").value;
-
-  if (topic.includes("নতুন বিষয় লিখুন")) {
-    topic = document.getElementById("iCustomCat").value.trim() || "অন্যান্য কাস্টম বিষয়";
-  }
-
+  const topic = document.getElementById("iCat").value;
   const title = document.getElementById("iTitle").value.trim();
   const desc = document.getElementById("iDesc").value.trim();
 
   if (!name || !ward || !topic || !title || !desc) {
-    alert("অনুগ্রহ করে ফর্মে তারকাচিহ্নিত (*) সকল ঘর সঠিকভাবে পূরণ করুন।");
+    alert("অনুগ্রহ করে ফর্মে তারকাচিহ্নিত (*) ঘরগুলো পূরণ করুন।");
     return;
   }
 
@@ -166,7 +126,7 @@ function closePreview() {
   document.getElementById("pm").classList.add("hidden");
 }
 
-// ফর্ম জমা নেওয়া
+// ফর্ম সাবমিশন
 document.getElementById("issueForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   submitIssue();
@@ -176,25 +136,20 @@ function submitIssue() {
   const name = document.getElementById("iName").value.trim();
   const ward = document.getElementById("iWard").value;
   const phone = document.getElementById("iPhone").value.trim();
-  const email = document.getElementById("iEmail").value.trim() || "দেওয়া হয়নি";
-
-  let topic = document.getElementById("iCat").value;
-  if (topic.includes("নতুন বিষয় লিখুন")) {
-    topic = document.getElementById("iCustomCat").value.trim() || "নতুন নাগরিক প্রস্তাবনা";
-  }
-
+  const email = document.getElementById("iEmail").value.trim() || "দেওয়া হয়নি";
+  const topic = document.getElementById("iCat").value;
   const title = document.getElementById("iTitle").value.trim();
   const desc = document.getElementById("iDesc").value.trim();
   const msg = document.getElementById("iMsg");
 
-  // বিডি মোবাইল নম্বর চেক
+  // বিডি মোবাইল নম্বর ফিল্টারিং
   if (!isValidBDPhone(phone)) {
     msg.className = "text-sm font-semibold text-red-600";
     msg.textContent = "❌ অনুগ্রহ করে একটি সঠিক ১১ ডিজিটের বাংলাদেশী মোবাইল নম্বর দিন (যেমন: 01869913211)।";
     return;
   }
 
-  // সংগৃহীত ডাটা পে-লোড
+  // পে-লোড ডাটা
   const payload = {
     id: Date.now(),
     name,
@@ -210,23 +165,19 @@ function submitIssue() {
     time: "এখনই"
   };
 
-  console.log("জমা হওয়া সকল তথ্য (IP, Location সহ):", payload);
+  console.log("জমা হওয়া সম্পূর্ণ ডাটা:", payload);
 
-  // ফিডে যোগ করা
+  // পাব্লিক ফিডে এড করা
   publicPosts.unshift(payload);
   renderFeed();
 
-  // স্বয়ংক্রিয়ভাবে চাহিদা ও প্রস্তাবিত পরিকল্পনায় যুক্ত করা
-  addNewPlan(title, "fa-star", desc);
-
   msg.className = "text-sm font-semibold text-green-600";
-  msg.textContent = "✅ আপনার নতুন প্রস্তাবনা ও সমস্যা সফলভাবে জমা হয়েছে!";
+  msg.textContent = "✅ আপনার সমস্যা/পরামর্শ সফলভাবে জমা হয়েছে! ধন্যবাদ।";
 
   document.getElementById("issueForm").reset();
-  document.getElementById("customCatBox").classList.add("hidden");
 }
 
-// পাবলিক ফিড রেন্ডারিং
+// ফিড রেন্ডারিং
 function renderFeed() {
   const box = document.getElementById("feedBox");
   const count = document.getElementById("cnt");
@@ -268,15 +219,40 @@ function upvote(id) {
   }
 }
 
-// সময়সূচি রেন্ডারিং
+// আইডিয়া/চাহিদা সেকশন রেন্ডার
+function renderIdeas() {
+  const box = document.getElementById("ideas");
+  if (!box) return;
+
+  const items = [
+    { title: "স্বচ্ছ শাসন ও জবাবদিহিতা", icon: "fa-scale-balanced", desc: "ইউনিয়ন পরিষদের সকল সেবা হয়রানিমুক্ত ও ডিজিটাল উপায়ে নিশ্চিত করা।" },
+    { title: "টেকসই ড্রেনেজ ও রাস্তাঘাট", icon: "fa-road", desc: "ওয়ার্ড ভিত্তিক সমস্যার তালিকা তৈরি করে অগ্রাধিকার ভিত্তিতে উন্নয়নকাজ বাস্তবায়ন।" },
+    { title: "সুপেয় পানি ও স্বাস্থ্যসেবা", icon: "fa-faucet-drip", desc: "প্রতিটি ওয়াডে আর্সেনিকমুক্ত সুপেয় পানির ব্যবস্থা ও ফ্রি মেডিক্যাল ক্যাম্প।" },
+    { title: "মাদকমুক্ত যুব সমাজ", icon: "fa-shield-heart", desc: "তরুণদের জন্য খেলার মাঠ, আইটি প্রশিক্ষণ ও সামাজিক কাজে সম্পৃক্তকরণ।" },
+    { title: "পরিবেশ ও বর্জ্য ব্যবস্থাপনা", icon: "fa-leaf", desc: "পরিচ্ছন্ন গ্রাম ও পরিবেশবান্ধব রাজারকুল গড়ে তোলার উদ্যোগ।" },
+    { title: "জরুরি নাগরিক সুবিধা", icon: "fa-lightbulb", desc: "স্ট্রিট লাইট স্থাপন ও রাতে নিরাপদ চলাচলের সুব্যবস্থা করা।" }
+  ];
+
+  box.innerHTML = items.map(item => `
+    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+      <div class="w-12 h-12 bg-royal-50 rounded-xl flex items-center justify-center text-royal-600 text-xl mb-4">
+        <i class="fa-solid ${item.icon}"></i>
+      </div>
+      <h3 class="font-bold text-navy-900 text-lg mb-2">${item.title}</h3>
+      <p class="text-slate-600 text-sm">${item.desc}</p>
+    </div>
+  `).join('');
+}
+
+// সময়সূচি রেন্ডার (১-৯ নম্বর ওয়ার্ড)
 function renderSchedule() {
   const body = document.getElementById("schBody");
   if (!body) return;
 
   const meetings = [
-    // { ward: "১, ২ ও ৩ নং ওয়ারড", date: "১৫ নভেম্বর ২০২৬", time: "বিকাল ৪:০০ টা", place: "রাজারকূল হাই স্কুল মাঠ" },
-    // { ward: "৪, ৫ ও ৬ নং ওয়ার্ড", date: "১৭ নভেম্বর ২০২৬", time: "বিকাল ৪:০০ টা", place: "নূরপাড়া জামে মসজদ সংলগ্ন" },
-    // { ward: "৭, ৮ ও ৯ নং ওয়ার্ড", date: "১৯ নভেম্বর ২০২৬", time: "বিকাল ৪:০০ টা", place: "রাজারকূল হাই স্কুল মাঠ" }
+    { ward: "১, ২ ও ৩ নং ওয়ার্ড", date: "১৫ নভেম্বর ২০২৬", time: "বিকাল ৪:০০ টা", place: "রাজারকূল হাই স্কুল মাঠ" },
+    { ward: "৪, ৫ ও ৬ নং ওয়ার্ড", date: "১৭ নভেম্বর ২০২৬", time: "বিকাল ৪:০০ টা", place: "নূরপাড়া জামে মসজিদ সংলগ্ন" },
+    { ward: "৭, ৮ ও ৯ নং ওয়ার্ড", date: "১৯ নভেম্বর ২০২৬", time: "বিকাল ৪:০০ টা", place: "মোল্লাপাড়া প্রাথমিক বিদ্যালয়" }
   ];
 
   body.innerHTML = meetings.map(m => `
@@ -293,6 +269,10 @@ function renderSchedule() {
 function toggleLang() {
   currentLang = currentLang === "bn" ? "en" : "bn";
   document.getElementById("langLabel").textContent = currentLang === "bn" ? "English" : "বাংলা";
+  updateLanguageUI();
+}
+
+function updateLanguageUI() {
   document.querySelectorAll("[data-bn]").forEach(el => {
     const text = el.getAttribute(`data-${currentLang}`);
     if (text) el.textContent = text;
@@ -311,6 +291,6 @@ document.getElementById("volForm")?.addEventListener("submit", (e) => {
     return;
   }
 
-  const text = `আসসালামু আলাইকুম, আমি ${name} (${ward})। অ্যাডভোকেট মু. ওমর ফারুক স্যারের নির্বাচনী প্রচারণায় স্বেচ্ছাসেবক হিসেবে কাজ করতে চাই। মোবাইল: ${phone}`;
+  const text = `আসসালামু আলাইকুম, আমি ${name} (${ward})। অ্যাডভোকেট মু. ওমর ফারুক স্যারের নির্বাচনী প্রচারণায় স্বেচ্ছাসেবক হিসেবে যুক্ত হতে চাই। মোবাইল: ${phone}`;
   window.open(`https://wa.me/8801869913211?text=${encodeURIComponent(text)}`, "_blank");
 });
